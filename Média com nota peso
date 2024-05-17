@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+
+public class HuxleyCode {
+    
+  public static void main(String args[]) {
+        
+        Scanner read = new Scanner(System.in);
+        double a, b, c, r;
+
+        a = read.nextDouble();
+        b = read.nextDouble();
+        c = read.nextDouble();
+        
+        a = (a * 2)/10;
+        b = (b * 3)/10;
+        c = (c * 5)/10;
+        
+        r = a + b + c;
+
+        System.out.printf("MEDIA = %.1f\n", r);
+
+        read.close();
+  }
+}
