@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class conceitomec
+{
+    public static void main(String[] args)
+    {
+        Scanner read = new Scanner(System.in);
+        int book,student,stable;
+
+        book = read.nextInt();
+        student =  read.nextInt();
+
+        stable = student/book;
+
+        if(stable <= 8) 
+        {
+            System.out.println("A\n");
+        }
+        else if(stable >= 9 && stable <= 12) 
+        {
+            System.out.println("B\n");
+        }
+        else if(stable >= 13 && stable <= 18) 
+        {
+            System.out.println("C\n");
+        }
+        else if(stable > 18)
+        {
+            System.out.println("D\n");
+        }
+
+        read.close();
+
+    }
+}
