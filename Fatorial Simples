@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Fatorial
+{
+    public static int fatorial (int numero)
+    {
+        if (numero <= 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return fatorial (numero - 1) * numero;
+        }
+    }
+
+    public static void main (String[] args)
+    {
+        Scanner read = new Scanner (System.in);
+        int numero, resposta;
+
+        numero = read.nextInt();
+        
+        resposta = fatorial(numero);
+
+        System.out.printf("%d\n", resposta);
+        
+        read.close();
+    }
+}
