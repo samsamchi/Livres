@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class MultFatorial
+{
+    public static int fatorial(int numero)
+    {
+        if (numero <= 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return fatorial (numero - 1) * numero;
+        }
+    }
+
+    public static void ler(Scanner read)
+    {
+        int entrada = read.nextInt(); 
+
+        if (entrada == -1) 
+        {
+            return;
+        }
+        else
+        {
+            int resposta = fatorial(entrada); 
+            System.out.printf("%d\n", resposta); 
+            ler(read);
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        Scanner read = new Scanner(System.in);
+        ler(read); 
+        read.close(); 
+    }
+
+}
