@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class votar
+{
+    public static void main (String[] args)
+    {
+        Scanner read = new Scanner(System.in);
+        
+        int line = read.nextInt();
+        int columm =  read.nextInt();
+
+        int[][] box = new int[columm][line];
+
+        for (int i = 0; i < columm; i++)
+        {
+            for(int j = 0; j < line; j++)
+            {
+                box[i][j] = read.nextInt();
+            }
+        }
+
+        for(int j = 0; j < line; j++)
+        {
+            int sumcolumm = 0;
+            for(int i = 0; i < columm; i++)
+            {
+                sumcolumm += box[i][j];
+            }
+
+            System.out.printf("Princesa %d: %d voto(s)\n", j+1,sumcolumm);
+        }
+
+        read.close();
+    }
+}
